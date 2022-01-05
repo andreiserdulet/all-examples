@@ -1,0 +1,16 @@
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "previous main next";
+}
+.icon {
+  transition: 1s ease;
+  &:hover {
+    color: purple;
+  }
+  &:active {
+    color: purple;
+  }
+}

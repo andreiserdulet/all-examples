@@ -1,0 +1,34 @@
+.section-birthday {
+  width: 70%;
+  height: 100px;
+  display: flex;
+  margin-top: 10px;
+  padding: 10px 0px;
+  .image-birthday-section {
+    width: 45%;
+
+    .image-birthday {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+  }
+  .info-birthday {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    .name-birthday {
+      font-size: 15px;
+      letter-spacing: 1.3px;
+    }
+    .age-birthday {
+      margin-top: 10px;
+      font-size: 13px;
+      color: gray;
+      font-weight: 400;
+    }
+
+  }
+}

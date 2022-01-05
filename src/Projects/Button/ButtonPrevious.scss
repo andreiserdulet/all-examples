@@ -1,0 +1,18 @@
+.previous {
+  grid-area: previous;
+  background: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  transition: 2s ease;
+  font-size: 50px;
+  position: fixed;
+  left: 0;
+  width: 10vw;
+  height: 100vh;
+  &:hover {
+    background: cornsilk;
+    opacity: 1;
+  }
+}

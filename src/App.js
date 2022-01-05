@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import projects from "./projects.js";
+import Home from "./Home.js";
+import BirthdayReminder from "./Projects/01-Birthday-Reminder/BirthdayReminder.js";
+import Tours from "./Projects/02-Tours/Tours.js";
+import Reviews from "./Projects/03-Reviews/Reviews.js";
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 function App() {
+  const [project, setProject] = useState(projects);
+  const location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <AnimatePresence exitBeforeEnter>
+        <Switch>
+          <Route exact path="/">
+            <Home project={project} />
+          </Route>
+          <Route path="/01-birthday-reminder">
+            <BirthdayReminder />
+          </Route>
+          <Route path="/02-tours">
+            <Tours />
+          </Route>
+          <Route path="/03-reviews">
+            <Reviews />
+          </Route>
+        </Switch>
+      </AnimatePresence>
+    </Router>
   );
 }
 

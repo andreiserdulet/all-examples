@@ -1,0 +1,29 @@
+.tour-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tour-loading {
+  text-align: center;
+}
+.tours-btn-revert-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  .tours-btn-revert {
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid crimson;
+    font-size: 30px;
+    background: white;
+    color: crimson;
+    cursor: pointer;
+    transition: 1s ease;
+    &:hover {
+      color: coral;
+      border: 1px solid coral;
+    }
+  }
+}

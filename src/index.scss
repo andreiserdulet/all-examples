@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Licorice&family=Roboto&family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(238, 238, 238);
+  font-family: "Roboto", sans-serif;
+}
+main {
+  grid-area: main;
+}

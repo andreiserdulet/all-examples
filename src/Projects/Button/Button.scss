@@ -1,0 +1,24 @@
+.home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.u-button {
+  width: 100px;
+  height: 40px;
+  background: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 1s ease-in;
+  &:hover {
+    background: #eaeaea;
+  }
+  a {
+    width: 100%;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+  }
+}
