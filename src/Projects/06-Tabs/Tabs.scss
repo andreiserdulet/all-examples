@@ -1,0 +1,84 @@
+.tabs-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .tabs-company-names {
+      min-width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .tabs-company-btn {
+        max-width: 200px;
+      }
+    }
+  }
+  .tabs-company-names {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: start;
+    padding: 35px;
+    .tabs-company-btn {
+      width: 100%;
+      margin: 10px 0px;
+      border: 0;
+      font-size: 30px;
+      &:hover {
+        border-left: 2px solid hsl(185, 65%, 40%);
+        color: hsl(185, 65%, 40%);
+      }
+    }
+  }
+  .tabs-info-container {
+    width: 80%;
+    padding: 30px;
+    .tabs-info {
+      letter-spacing: 2px;
+      text-transform: capitalize;
+      .tabs-title {
+        font-weight: 600;
+      }
+      .tabs-category {
+        margin: 10px 0px 10px 0px;
+        .tabs-category-text {
+          display: inline;
+          background: rgb(179, 203, 248);
+          padding: 5px;
+          font-weight: 600;
+          opacity: 0.7;
+        }
+      }
+      .tabs-dates {
+        opacity: 0.5;
+      }
+    }
+  }
+  .tabs-jobs {
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    .tabs-icon-column {
+      width: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      .tabs-icon {
+        color: hsl(185, 65%, 40%);
+      }
+    }
+    .tabs-duty {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

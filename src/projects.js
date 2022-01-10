@@ -1,5 +1,9 @@
 import project01 from "./assets/images/birthday-reminder.png";
 import project02 from "./assets/images/tours.png";
+import project03 from "./assets/images/reviews.png";
+import project04 from "./assets/images/accordion.png";
+import project05 from "./assets/images/menu.png";
+import project06 from "./assets/images/tabs.png";
 const projects = [
   {
     id: 1,
@@ -16,13 +20,16 @@ const projects = [
   {
     id: 3,
     name: "Reviews",
+    img: project03,
     url: "/03-reviews",
   },
   {
     id: 4,
     name: "Accordion",
+    img: project04,
+    url: "/04-accordion",
   },
-  { id: 5, name: "Menu" },
-  { id: 6, name: "Tabs" },
+  { id: 5, name: "Menu", img: project05, url: "/05-menu" },
+  { id: 6, name: "Tabs", img: project06, url: "/06-tabs" },
 ];
 export default projects;

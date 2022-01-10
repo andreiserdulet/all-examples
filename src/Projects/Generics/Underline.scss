@@ -4,4 +4,8 @@
   height: 3px;
   background-color: cornflowerblue;
   border-radius: 40px;
+  @media (max-width: 1000px) {
+    min-width: 50px;
+    min-height: 3px;
+  }
 }

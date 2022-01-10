@@ -1,0 +1,86 @@
+.reviews {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.review-card {
+  width: 700px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 5px 10px gray;
+  @media (max-width: 375px) {
+    width: 376px;
+    height: 400px;
+  }
+  .image-review {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-shadow: 5px -1px 0px cornflowerblue;
+  }
+  .quote-icon-review {
+    display: block;
+    position: relative;
+    color: cornflowerblue;
+    right: 40px;
+    top: -100px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .name-review {
+    font-size: 15px;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+  }
+  .job-review {
+    margin-top: 5px;
+    background-color: cornsilk;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: cornflowerblue;
+  }
+  .text-review {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 200;
+  }
+  .change-btn-review {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    .icon-review {
+      color: cornflowerblue;
+      :hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
+  }
+  .btn-review {
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    background: rgb(200, 255, 255);
+    border-color: cornflowerblue;
+    border-radius: 10px;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: cornflowerblue;
+    cursor: pointer;
+    transition: 0.5s ease;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

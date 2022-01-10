@@ -4,6 +4,10 @@
   grid-template-columns: 0.2fr 1fr 0.2fr;
   grid-template-rows: 1fr;
   grid-template-areas: "previous main next";
+  @media (max-width: 1000px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 .icon {
   transition: 1s ease;

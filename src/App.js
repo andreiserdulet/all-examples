@@ -6,10 +6,11 @@ import Home from "./Home.js";
 import BirthdayReminder from "./Projects/01-Birthday-Reminder/BirthdayReminder.js";
 import Tours from "./Projects/02-Tours/Tours.js";
 import Reviews from "./Projects/03-Reviews/Reviews.js";
-import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
+import Accordion from "./Projects/04-Accordion/Accordion.js";
+import MenuPage from "./Projects/05-Menu/MenuPage.js";
+import TabsPage from "./Projects/06-Tabs/TabsPage.js";
 function App() {
   const [project, setProject] = useState(projects);
-  const location = useLocation();
   return (
     <Router>
       <AnimatePresence exitBeforeEnter>
@@ -25,6 +26,15 @@ function App() {
           </Route>
           <Route path="/03-reviews">
             <Reviews />
+          </Route>
+          <Route path="/04-accordion">
+            <Accordion />
+          </Route>
+          <Route path="/05-menu">
+            <MenuPage />
+          </Route>
+          <Route path="/06-tabs">
+            <TabsPage />
           </Route>
         </Switch>
       </AnimatePresence>

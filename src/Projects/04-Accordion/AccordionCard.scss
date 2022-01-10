@@ -1,0 +1,41 @@
+.accordion-card {
+  width: 60vw;
+  display: flex;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 20px;
+  background: white;
+
+  .accordion-column-1 {
+    width: 25%;
+    .accordion-title-column-1 {
+      font-size: 35px;
+      text-transform: capitalize;
+    }
+  }
+  .accordion-column-2 {
+    width: 75%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    .accordion-column-1 {
+      width: 100%;
+      margin-bottom: 20px;
+      .accordion-title-column-1 {
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+      }
+    }
+
+    .accordion-column-2 {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}

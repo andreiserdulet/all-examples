@@ -9,15 +9,9 @@ const HomeCard = ({ project }) => {
         return (
           <div key={id} className="card">
             <Link to={url}>
-              <div
-                className="card-details"
-                style={{
-                  background: `url(${img})`,
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
-                  backgroundPosition: "45% 100%",
-                }}
-              ></div>
+              <div className="card-details">
+                <img src={img} alt={name} className="card-details-img" />
+              </div>
             </Link>
 
             <button className="btn" type="button">

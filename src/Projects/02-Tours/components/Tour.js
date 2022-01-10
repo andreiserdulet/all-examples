@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react/cjs/react.development";
 import "./Tour.scss";
-import Loading from "./Loading";
+import Loading from "../../Generics/Loading";
 import TourList from "./ToursList";
 const Tour = ({ url }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -9,7 +9,6 @@ const Tour = ({ url }) => {
   const removeTour = (id) => {
     const newTours = tours.filter((tour) => tour.id !== id);
     setTours(newTours);
-    console.log(id);
   };
   const fetchTours = async () => {
     setIsLoading(true);
@@ -26,6 +25,7 @@ const Tour = ({ url }) => {
   };
   useEffect(() => {
     fetchTours();
+    return () => setTours({});
   }, []);
   if (isLoading) {
     return (

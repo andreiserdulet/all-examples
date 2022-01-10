@@ -1,6 +1,5 @@
-.gridTest {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
+.main-reviews {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }

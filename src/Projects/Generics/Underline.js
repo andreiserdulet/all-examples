@@ -1,9 +1,9 @@
 import React from "react";
 import "./Underline.scss";
-const Underline = ({ width }) => {
+const Underline = ({ width, color }) => {
   return (
     <>
-      <div className="underline" style={{ width: `${width}` }}></div>
+      <div className="underline" style={{ width: `${width}`, background:`${color}` }}></div>
     </>
   );
 };

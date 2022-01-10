@@ -18,7 +18,12 @@ const Home = ({ project }) => {
         <div className="container">
           <HomeCard project={project} />
         </div>
-        <p className="p-home">A.S</p>
+        <a
+          href="https://github.com/andreiserdulet/all-examples"
+          className="p-home"
+        >
+          A.S
+        </a>
       </main>
     </motion.div>
   );
