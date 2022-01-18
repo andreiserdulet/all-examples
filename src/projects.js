@@ -34,5 +34,6 @@ const projects = [
   { id: 7, name: "Slider", url: "/07-slider" },
   { id: 8, name: "Lorem Ipsum", url: "/08-lorem" },
   { id: 9, name: "Redux", url: "/100-redux" },
+  {id:10, name:'Jotto', url:'/10-jotto'}
 ];
 export default projects;

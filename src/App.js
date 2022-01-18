@@ -11,6 +11,7 @@ import MenuPage from "./Projects/05-Menu/MenuPage.js";
 import TabsPage from "./Projects/06-Tabs/TabsPage.js";
 import SliderPage from "./Projects/08-Slider/SliderPage.js";
 import AppRedux from "./Projects/100-Redux/AppRedux.js";
+import JottoPage from './Projects/10-Jotto/JottoPage.js'
 function App() {
   const [project, setProject] = useState(projects);
   return (
@@ -43,6 +44,9 @@ function App() {
           </Route>
           <Route path="/100-redux">
             <AppRedux />
+          </Route>
+          <Route path="/10-jotto">
+            <JottoPage />
           </Route>
         </Switch>
       </AnimatePresence>
