@@ -5,20 +5,20 @@ import ButtonPrevious from "../Button/ButtonPrevious";
 import GridContainer from "../Generics/GridContainer";
 import HomeTitle from "../Generics/HomeTitle";
 import Underline from "../Generics/Underline";
-import Tabs from "./Tabs";
-import "./TabsPage.scss";
-const TabsPage = () => {
+import Slider from "./components/Slider";
+import "./SliderPage.scss";
+const SliderPage = () => {
   return (
     <GridContainer>
-      <ButtonPrevious url="/05-menu" />
-      <main className="tabs-main">
+      <ButtonPrevious url="/06-tabs" />
+      <main className="slider-main">
         <Button name="Home" url="/" />
-        <HomeTitle name="Expierence" />
-        <Underline width="70px" color="hsl(185, 84%, 25%)" />
-        <Tabs />
+        <HomeTitle name="Reviews" />
+        <Underline width="75px" />
+        <Slider />
       </main>
-      <ButtonNext url="/07-slider" />
+      <ButtonNext url="/" />
     </GridContainer>
   );
 };
-export default TabsPage;
+export default SliderPage;

@@ -31,5 +31,8 @@ const projects = [
   },
   { id: 5, name: "Menu", img: project05, url: "/05-menu" },
   { id: 6, name: "Tabs", img: project06, url: "/06-tabs" },
+  { id: 7, name: "Slider", url: "/07-slider" },
+  { id: 8, name: "Lorem Ipsum", url: "/08-lorem" },
+  { id: 9, name: "Redux", url: "/100-redux" },
 ];
 export default projects;

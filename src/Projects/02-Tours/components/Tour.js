@@ -34,7 +34,6 @@ const Tour = ({ url }) => {
       </main>
     );
   }
-
   return (
     <div className="tour-container">
       {tours.map((tour) => {

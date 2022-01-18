@@ -9,6 +9,8 @@ import Reviews from "./Projects/03-Reviews/Reviews.js";
 import Accordion from "./Projects/04-Accordion/Accordion.js";
 import MenuPage from "./Projects/05-Menu/MenuPage.js";
 import TabsPage from "./Projects/06-Tabs/TabsPage.js";
+import SliderPage from "./Projects/08-Slider/SliderPage.js";
+import AppRedux from "./Projects/100-Redux/AppRedux.js";
 function App() {
   const [project, setProject] = useState(projects);
   return (
@@ -35,6 +37,12 @@ function App() {
           </Route>
           <Route path="/06-tabs">
             <TabsPage />
+          </Route>
+          <Route path="/07-slider">
+            <SliderPage />
+          </Route>
+          <Route path="/100-redux">
+            <AppRedux />
           </Route>
         </Switch>
       </AnimatePresence>
