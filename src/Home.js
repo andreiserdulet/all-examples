@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.scss";
 import HomeCard from "./Projects/Generics/HomeCard";
 import HomeTitle from "./Projects/Generics/HomeTitle";
 import Underline from "./Projects/Generics/Underline";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Home = ({ project }) => {
   return (

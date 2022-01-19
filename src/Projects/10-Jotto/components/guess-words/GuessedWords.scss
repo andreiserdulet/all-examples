@@ -1,0 +1,20 @@
+.guessed-words-container {
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 20px;
+  .guessed-words-table {
+    border: 1px solid black;
+    margin: 20px auto;
+  }
+  th {
+    border: 1px solid black;
+    width: 300px;
+  }
+  tr{
+      border:1px solid black;
+  }
+  td{
+      border: 1px solid black;
+  }
+}
