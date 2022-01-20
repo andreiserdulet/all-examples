@@ -2,48 +2,53 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './GuessedWords.scss'
 const GuessedWords = (props) =>{
-    let contents;
-    if(props.guessedWords.length === 0){
-        contents = (
-            <span data-test='guess-instructions'>Try guess the secret word!</span>
-        )
-    }
-    else{
-        const guessedWordsRow = props.guessedWords.map((word,index)=>{
-            return <tr data-test="guessed-word" key={index}>
-                <td>{word.guessedWord}</td>
-                <td>{word.letterMachCount}</td>
-            </tr>
-        })
-        contents = (
-            <div data-test='guessed-words' className='guessed-words-container'>
-                <h3>Guessed Words</h3>
-                <table className='guessed-words-table'>
-                    <thead>
-                        <tr>
-                            <th>Guess</th>
-                            <th>Matchng Letters</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {guessedWordsRow}
-                    </tbody>
-                </table>
-            </div>
-        )
-    }
-    return (<div data-test="component-guessed-words">
-        {contents}
-        </div>)
-}
+  let contents
+  if (props.guessedWords.length === 0) {
+    contents = (
+      <span data-test="guess-instructions">
+        Try to guess the secret word!
+      </span>
+    );
+  } else {
+    const guessedWordsRows = props.guessedWords.map((word, index) => (
+      <div data-test="guessed-word" key={ index } className='content-row'>
+        <h1>{ word.guessedWord }</h1>
+        <h1>{ word.letterMatchCount }</h1>
+      </div>
+    ));
+    contents = (
+      <div data-test="guessed-words" className='notebook-paper'>
+        <header>
+        <h1 className='title-jotto'>Guessed Words</h1>
+        </header>
+     
 
-GuessedWords.propTypes = {
- guessedWords: PropTypes.arrayOf(
-     PropTypes.shape({
-         guessedWord: PropTypes.string.isRequired,
-         letterMachCount:PropTypes.number.isRequired,
-     })
- ).isRequired,
+          <div className='wrapperr'>
+          <div className="title-row">
+              <h1>Guess</h1>
+            <h1>Matching Letters</h1>
+          </div>
+          <div className='content-row-container'>
+            { guessedWordsRows }
+          </div>
+          </div>
+
+      </div>
+    );
+  }
+  return (
+    <div data-test="component-guessed-words">
+      { contents }
+    </div>
+  );
 };
 
+GuessedWords.propTypes = {
+  guessedWords: PropTypes.arrayOf(
+    PropTypes.shape({
+      guessedWord: PropTypes.string.isRequired,
+      letterMatchCount: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};
 export default GuessedWords;

@@ -1,7 +1,9 @@
-import Enzyme, {shallow} from 'enzyme';
+import Enzyme, {mount} from 'enzyme';
 import {findByAttr, checkProps} from '../../test/testUtils.js'
 import EnzymeAdapter from '@wojtekmaj/enzyme-adapter-react-17'
 import InputJotto from './InputJotto.js'
+import { Provider } from 'react-redux';
+import { storeFactory } from '../../test/testUtils.js';
 import React from 'react';
 Enzyme.configure({adapter: new EnzymeAdapter()});
 // const mockSetCurrentGuess = jest.fn();
@@ -11,14 +13,15 @@ Enzyme.configure({adapter: new EnzymeAdapter()});
 //     useState:(initialState)=> [initialState, mockSetCurrentGuess]
 //     }
 // ))
-const setup =(success=false, secretWord='party') =>{
-    return shallow(<InputJotto success={success} secretword={secretWord}/>)
+const setup =(initialState={}, secretWord='party') =>{
+    const store = storeFactory();
+    return mount(<Provider store={store}><InputJotto secretword={secretWord}/></Provider>)
 }
 describe('render', ()=>{
-    describe('success is true', ()=>{
+    describe('success is false', ()=>{
         let wrapper;
         beforeEach(()=>{
-            wrapper=setup(true);
+            wrapper=setup({success:false});
         })
         test('renders without error', ()=>{
             const inputComponent = findByAttr(wrapper, 'component-input');
@@ -26,17 +29,17 @@ describe('render', ()=>{
         })
         test('input box does not show', ()=>{
             const inputBox = findByAttr(wrapper, 'input-box');
-            expect(inputBox.exists()).toBe(false);
+            expect(inputBox.exists()).toBe(true);
         })
         test('submit button does not show', ()=>{
             const submitButton = findByAttr(wrapper, 'submit-button');
-            expect(submitButton.exists()).toBe(false);
+            expect(submitButton.exists()).toBe(true);
         })
     })
-    describe('success is false', ()=>{
+    describe('success is true', ()=>{
         let wrapper;
         beforeEach(()=>{
-            wrapper=setup(false);
+            wrapper=setup({success:true});
         })
         test('renders without error', ()=>{
             const inputComponent = findByAttr(wrapper, 'component-input');
@@ -64,7 +67,7 @@ describe('state controlled input field', ()=>{
         mockSetCurrentGuess.mockClear();
         originalUseState = React.useState;
         React.useState = jest.fn(()=>['', mockSetCurrentGuess]);
-        wrapper = setup();
+        wrapper = setup({success:false});
     })
     afterEach(()=>{
         React.useState = originalUseState;
