@@ -25,8 +25,8 @@ const GuessedWords = (props) =>{
 
           <div className='wrapperr'>
           <div className="title-row">
-              <h1>Guess</h1>
-            <h1>Matching Letters</h1>
+              <h1 className='title-row-text'>Guess</h1>
+            <h1 className='title-row-text'>Matching Letters</h1>
           </div>
           <div className='content-row-container'>
             { guessedWordsRows }
